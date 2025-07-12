@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, ShoppingCart, Heart, ChevronRight, Star } from 'lucide-react';
+import { Search, ShoppingCart, Heart, ChevronRight, Star, Blocks, Grid2X2 } from 'lucide-react';
 
 const WalmartHomepage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -7,7 +7,7 @@ const WalmartHomepage = () => {
   const deals = [
     {
       id: 1,
-      image: "https://images.pexels.com/photos/2866796/pexels-photo-2866796.jpeg",
+      image: "https://images.pexels.com/photos/981619/pexels-photo-981619.jpeg",
       title: "Rock & Republic Women's Denim Rx Fever Pull On Jegging",
       currentPrice: "$34.79",
       originalPrice: "$59.98",
@@ -16,7 +16,7 @@ const WalmartHomepage = () => {
     },
     {
       id: 2,
-      image: "/api/placeholder/200/200",
+      image: "https://images.pexels.com/photos/2560894/pexels-photo-2560894.jpeg",
       title: "Hanes Essentials Men's Short Sleeve T-Shirt, up to Sizes 3XL",
       currentPrice: "$3.54",
       originalPrice: "$10.00",
@@ -25,7 +25,7 @@ const WalmartHomepage = () => {
     },
     {
       id: 3,
-      image: "/api/placeholder/200/200",
+      image: "https://images.pexels.com/photos/2228889/pexels-photo-2228889.jpeg",
       title: "(4 pack) Black Rifle Coffee Company Just Black Keurig K-Cup",
       currentPrice: "$44.72",
       originalPrice: "$63.88",
@@ -33,32 +33,15 @@ const WalmartHomepage = () => {
       isDeal: true
     },
     {
-      id: 4,
-      image: "/api/placeholder/200/200",
-      title: "Rhino USA Heavy Duty 1\" x 10' Retractable Ratchet Straps",
-      currentPrice: "$34.50",
-      originalPrice: "$49.90",
-      priceRange: "Options from $34.50 - $68.31",
-      isDeal: true
-    },
-    {
       id: 5,
-      image: "/api/placeholder/200/200",
+      image: "https://images.pexels.com/photos/7480781/pexels-photo-7480781.jpeg",
       title: "Better Homes & Gardens Mira Swivel Accent Chair, Cream",
       currentPrice: "$148.00",
       originalPrice: "$248.00",
       priceRange: "Options from $148.00 - $266.00",
       isDeal: true
     },
-    {
-      id: 6,
-      image: "/api/placeholder/200/200",
-      title: "Nestl Queen Sheets Set, 1800 Series 4 Piece Deep Pocket",
-      currentPrice: "$17.49",
-      originalPrice: "$69.99",
-      priceRange: "Options from $17.49 - $29.99",
-      isDeal: true
-    }
+
   ];
 
   const categories = [
@@ -75,7 +58,7 @@ const WalmartHomepage = () => {
           <div className="flex items-center justify-between">
             {/* Logo and Location */}
             <div className="flex items-center space-x-4">
-              <div className="text-2xl font-bold text-yellow-400">*</div>
+              <img src="https://i5.walmartimages.com/dfw/63fd9f59-14e2/9d304ce6-96de-4331-b8ec-c5191226d378/v1/spark-icon.svg" alt="Walmart Logo" className="h-8 w-8 object-contain" />
               <div className="flex items-center space-x-2 bg-blue-700 rounded-full px-3 py-1">
                 <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
                   <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
@@ -93,7 +76,7 @@ const WalmartHomepage = () => {
                 <input
                   type="text"
                   placeholder="Search everything at Walmart online and in store"
-                  className="w-full px-4 py-2 rounded-full text-gray-800 pl-4 pr-12"
+                  className="w-full px-4 py-2 rounded-full text-blue-900 pl-4 pr-12 bg-amber-50 font-medium"
                 />
                 <Search className="absolute right-4 top-2.5 h-5 w-5 text-gray-600" />
               </div>
@@ -125,15 +108,15 @@ const WalmartHomepage = () => {
           <div className="container mx-auto px-4">
             <div className="flex items-center space-x-8 py-2">
               <div className="flex items-center space-x-2 font-semibold">
-                <div className="w-4 h-4 bg-gray-400"></div>
+                 <Blocks className="h-6 w-6" />
                 <span>Departments</span>
               </div>
               <div className="flex items-center space-x-2 font-semibold">
-                <div className="w-4 h-4 bg-gray-400"></div>
+                 <Grid2X2 className="h-6 w-6" />
                 <span>Services</span>
               </div>
               {categories.map((category, index) => (
-                <div key={index} className="text-sm hover:text-blue-600 cursor-pointer">
+                <div key={index} className="text-[12px] hover:text-blue-600 cursor-pointer">
                   {category}
                 </div>
               ))}
@@ -151,29 +134,34 @@ const WalmartHomepage = () => {
             <div className="bg-cyan-200 rounded-lg p-6">
               <h2 className="text-xl font-bold text-gray-800 mb-2">WOW-worthy beauty Deals</h2>
               <button className="text-blue-600 font-semibold underline mb-4">Shop Deals</button>
-              <img src="https://images.pexels.com/photos/2866796/pexels-photo-2866796.jpeg" alt="Beauty Product" className="w-full" />
+              <img src="https://images.pexels.com/photos/2866796/pexels-photo-2866796.jpeg" alt="Beauty Product" className="w-full h-60 object-cover rounded-lg" />
             </div>
             <div className="bg-cyan-200 rounded-lg p-6">
               <h2 className="text-xl font-bold text-gray-800 mb-2">Huge savings on sporting goods</h2>
               <button className="text-blue-600 font-semibold underline mb-4">Shop Deals</button>
-              <img src="https://images.pexels.com/photos/8694451/pexels-photo-8694451.jpeg" alt="Sports Equipment" className="w-full" />
+              <img src="https://images.pexels.com/photos/8694451/pexels-photo-8694451.jpeg" alt="Sports Equipment" className="w-full h-70 object-cover rounded-lg" />
             </div>
           </div>
 
           {/* Center - Main Promotion */}
           <div className="lg:col-span-2">
-            <div className="bg-yellow-400 rounded-lg p-8 relative overflow-hidden h-full">
+            <div
+              className="rounded-lg p-8 relative overflow-hidden h-full bg-cover bg-center text-white flex flex-col justify-between"
+              style={{
+                backgroundImage:
+                  "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.pexels.com/photos/5868272/pexels-photo-5868272.jpeg')",
+              }}
+            >
               <div className="relative z-10">
                 <div className="text-lg font-semibold mb-2">Save big now!</div>
-                <h1 className="text-4xl font-bold text-gray-800 mb-4">
+                <h1 className="text-4xl font-bold mb-4">
                   Get a year of Walmart+ for only $49
-                </h1>
+                </h1>sportscoff
                 <button className="bg-white text-gray-800 px-6 py-2 rounded-full font-semibold hover:bg-gray-100">
                   Claim offer
                 </button>
-                <img src="https://images.pexels.com/photos/5868272/pexels-photo-5868272.jpeg" alt="TV" className="w-full mt-20" />
               </div>
-              <div className="absolute right-0 top-0 w-80 h-full">
+              <div className="absolute right-0 top-40 w-80 h-full">
                 <div className="bg-white rounded-lg shadow-lg p-6 mt-8 mr-8 transform rotate-12">
                   <div className="text-6xl font-bold text-blue-600">50%</div>
                   <div className="text-blue-600 font-semibold">off</div>
@@ -191,12 +179,12 @@ const WalmartHomepage = () => {
             <div className="bg-cyan-200 rounded-lg p-6">
               <h2 className="text-xl font-bold text-gray-800 mb-2">TVs up to 25% off</h2>
               <button className="text-blue-600 font-semibold underline mb-4">Shop Deals</button>
-              <img src="https://images.pexels.com/photos/6976094/pexels-photo-6976094.jpeg" alt="TV" className="w-full" />
+              <img src="https://images.pexels.com/photos/6976094/pexels-photo-6976094.jpeg" alt="TV" className="w-full h-80 object-cover rounded-lg" />
             </div>
             <div className="bg-cyan-200 rounded-lg p-6">
               <h2 className="text-xl font-bold text-gray-800 mb-2">Up to 30% off food & beverages</h2>
               <button className="text-blue-600 font-semibold underline mb-4">Shop Deals</button>
-              <img src="https://images.pexels.com/photos/6994944/pexels-photo-6994944.jpeg" alt="Food Products" className="w-full h-1/2" />
+              <img src="https://images.pexels.com/photos/6994944/pexels-photo-6994944.jpeg" alt="Food Products" className="w-full h-40 object-cover rounded-lg" />
             </div>
             <div className="bg-cyan-200 rounded-lg p-6">
               <h2 className="text-xl font-bold text-gray-800 mb-2">Resold at Walmart: up to 20% off</h2>
@@ -209,17 +197,17 @@ const WalmartHomepage = () => {
           <div className="bg-blue-400 rounded-lg p-6 text-white">
             <h3 className="text-lg font-bold mb-2">Decor up to 30% off</h3>
             <button className="text-white underline">Shop Deals</button>
-            <img src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg" alt="Decor" className="w-full h-48 mt-4 object-cover" />
+            <img src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg" alt="Decor" className="w-full h-48 mt-4 object-contain" />
           </div>
           <div className="bg-yellow-200 rounded-lg p-6">
             <h3 className="text-lg font-bold mb-2">Up to 40% off</h3>
             <button className="text-blue-600 underline">Shop now</button>
-            <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg" alt="Electronics" className="w-full mt-4 h-48 object-cover" />
+            <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg" alt="Electronics" className="w-full mt-4 h-48 object-contain" />
           </div>
           <div className="bg-cyan-200 rounded-lg p-6">
             <h3 className="text-lg font-bold mb-2">Up to 30% off food & beverages</h3>
             <button className="text-blue-600 underline">Shop Deals</button>
-            <img src="https://images.pexels.com/photos/1889571/pexels-photo-1889571.jpeg" alt="Electronics" className="w-full mt-4 h-48 object-cover" />
+            <img src="https://images.pexels.com/photos/1889571/pexels-photo-1889571.jpeg" alt="Electronics" className="w-full mt-4 h-48 object-contain" />
           </div>
         </div>
 
@@ -239,7 +227,7 @@ const WalmartHomepage = () => {
                   </div>
                 )}
                 <div className="relative mb-4">
-                  <img src={deal.image} alt={deal.title} className="w-full h-40 object-cover rounded" />
+                  <img src={deal.image} alt={deal.title} className="w-full h-40 object-contain rounded" />
                   <button className="absolute top-2 right-2 p-1 bg-white rounded-full shadow">
                     <Heart className="h-4 w-4 text-gray-600" />
                   </button>
