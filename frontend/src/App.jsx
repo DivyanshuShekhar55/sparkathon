@@ -7,7 +7,7 @@ const WalmartHomepage = () => {
   const deals = [
     {
       id: 1,
-      image: "/api/placeholder/200/200",
+      image: "https://images.pexels.com/photos/2866796/pexels-photo-2866796.jpeg",
       title: "Rock & Republic Women's Denim Rx Fever Pull On Jegging",
       currentPrice: "$34.79",
       originalPrice: "$59.98",
@@ -151,12 +151,12 @@ const WalmartHomepage = () => {
             <div className="bg-cyan-200 rounded-lg p-6">
               <h2 className="text-xl font-bold text-gray-800 mb-2">WOW-worthy beauty Deals</h2>
               <button className="text-blue-600 font-semibold underline mb-4">Shop Deals</button>
-              <img src="/api/placeholder/150/150" alt="Beauty Product" className="w-full" />
+              <img src="https://images.pexels.com/photos/2866796/pexels-photo-2866796.jpeg" alt="Beauty Product" className="w-full" />
             </div>
             <div className="bg-cyan-200 rounded-lg p-6">
               <h2 className="text-xl font-bold text-gray-800 mb-2">Huge savings on sporting goods</h2>
               <button className="text-blue-600 font-semibold underline mb-4">Shop Deals</button>
-              <img src="/api/placeholder/150/150" alt="Sports Equipment" className="w-full" />
+              <img src="https://images.pexels.com/photos/8694451/pexels-photo-8694451.jpeg" alt="Sports Equipment" className="w-full" />
             </div>
           </div>
 
@@ -171,6 +171,7 @@ const WalmartHomepage = () => {
                 <button className="bg-white text-gray-800 px-6 py-2 rounded-full font-semibold hover:bg-gray-100">
                   Claim offer
                 </button>
+                <img src="https://images.pexels.com/photos/5868272/pexels-photo-5868272.jpeg" alt="TV" className="w-full mt-20" />
               </div>
               <div className="absolute right-0 top-0 w-80 h-full">
                 <div className="bg-white rounded-lg shadow-lg p-6 mt-8 mr-8 transform rotate-12">
@@ -190,12 +191,12 @@ const WalmartHomepage = () => {
             <div className="bg-cyan-200 rounded-lg p-6">
               <h2 className="text-xl font-bold text-gray-800 mb-2">TVs up to 25% off</h2>
               <button className="text-blue-600 font-semibold underline mb-4">Shop Deals</button>
-              <img src="/api/placeholder/150/100" alt="TV" className="w-full" />
+              <img src="https://images.pexels.com/photos/6976094/pexels-photo-6976094.jpeg" alt="TV" className="w-full" />
             </div>
             <div className="bg-cyan-200 rounded-lg p-6">
               <h2 className="text-xl font-bold text-gray-800 mb-2">Up to 30% off food & beverages</h2>
               <button className="text-blue-600 font-semibold underline mb-4">Shop Deals</button>
-              <img src="/api/placeholder/150/150" alt="Food Products" className="w-full" />
+              <img src="https://images.pexels.com/photos/6994944/pexels-photo-6994944.jpeg" alt="Food Products" className="w-full h-1/2" />
             </div>
             <div className="bg-cyan-200 rounded-lg p-6">
               <h2 className="text-xl font-bold text-gray-800 mb-2">Resold at Walmart: up to 20% off</h2>
@@ -208,16 +209,17 @@ const WalmartHomepage = () => {
           <div className="bg-blue-400 rounded-lg p-6 text-white">
             <h3 className="text-lg font-bold mb-2">Decor up to 30% off</h3>
             <button className="text-white underline">Shop Deals</button>
-            <img src="/api/placeholder/100/100" alt="Decor" className="w-20 h-20 mt-4" />
+            <img src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg" alt="Decor" className="w-full h-48 mt-4 object-cover" />
           </div>
           <div className="bg-yellow-200 rounded-lg p-6">
             <h3 className="text-lg font-bold mb-2">Up to 40% off</h3>
             <button className="text-blue-600 underline">Shop now</button>
-            <img src="/api/placeholder/100/80" alt="Electronics" className="w-full mt-4" />
+            <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg" alt="Electronics" className="w-full mt-4 h-48 object-cover" />
           </div>
           <div className="bg-cyan-200 rounded-lg p-6">
             <h3 className="text-lg font-bold mb-2">Up to 30% off food & beverages</h3>
             <button className="text-blue-600 underline">Shop Deals</button>
+            <img src="https://images.pexels.com/photos/1889571/pexels-photo-1889571.jpeg" alt="Electronics" className="w-full mt-4 h-48 object-cover" />
           </div>
         </div>
 
