@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Search, ShoppingCart, Heart, ChevronRight, Star, Blocks, Grid2X2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Search, ShoppingCart, Heart, ChevronRight, Star, Blocks, Grid2X2, Bot } from 'lucide-react';
 
 const WalmartHomepage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -259,6 +260,10 @@ const WalmartHomepage = () => {
           </div>
         </section>
       </main>
+      <Link to="/chatbot" className="fixed bottom-8 right-8 bg-blue-600 text-white py-3 px-4 rounded-full shadow-lg flex items-center space-x-2 hover:bg-blue-700 transition-colors z-50">
+        <Bot className="h-6 w-6 text-white" />
+        <span className="font-semibold text-white">Smart Search</span>
+      </Link>
     </div>
   );
 };
