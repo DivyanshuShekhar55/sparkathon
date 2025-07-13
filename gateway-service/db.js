@@ -1,5 +1,5 @@
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://walmart1:walmart123#@cluster0.ckaz2rc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+import { MongoClient, ServerApiVersion } from 'mongodb';
+const uri = "mongodb+srv://walmart1:walmart123%23@cluster0.ckaz2rc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 const client = new MongoClient(uri, {
   serverApi: {

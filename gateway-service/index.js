@@ -1,9 +1,9 @@
-require('dotenv').config();
+
 import express, { json } from 'express';
 import cors from 'cors';
 
-import run from './db-setup/run';      // Your DB setup file
-import routes from './backend/routes'; // Your main routes
+import run from './db.js';      // Your DB setup file
+import routes from './routes.js'; // Your main routes
 
 const app = express();
 const PORT = process.env.PORT || 3000;
