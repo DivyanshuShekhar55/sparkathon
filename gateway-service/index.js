@@ -1,9 +1,8 @@
-
 import express, { json } from 'express';
 import cors from 'cors';
 
-import run from './db.js';      // Your DB setup file
-import routes from './routes.js'; // Your main routes
+import run from './db.js';     
+import routes from './routes.js'; 
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -17,7 +16,6 @@ run()
   .then(() => {
     console.log('Database connected successfully.');
 
-    // Add your routes
     app.use('/api', routes);
 
     // Root route
