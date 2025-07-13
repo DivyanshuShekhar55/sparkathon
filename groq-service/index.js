@@ -1,15 +1,16 @@
-import express from "express";
+import express, {json} from "express";
 import cors from "cors";
 const app = express();
-import router, { GroqService } from './routes.js'
+import router from './routes.js'
 import 'dotenv/config';
 
 const GROQ_PORT = 3001;
 
 app.use(cors());
+app.use(json())
 
-//app.use('/api', router)
-app.get('/groq-service/api/', GroqService)
+app.use('/', router)
+//app.get('/groq-service/api/', GroqService)
 //GroqService
 
 // Start server

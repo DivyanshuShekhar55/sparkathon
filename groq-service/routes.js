@@ -6,7 +6,22 @@ import Groq from "groq-sdk";
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
-export async function GroqService(userPrompt) {
+router.post('/groq-service/api/', async (req, res) => {
+  
+  const {userPrompt} = req.body;
+  if (!userPrompt) {
+    return res.status(400).json({ error: "Missing prompt parameter" });
+  }
+  try {
+    const result = await GroqService(userPrompt);
+    res.json({ items: result });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Groq API error" });
+  }
+});
+
+async function GroqService(userPrompt) {
   const chatCompletion = await getProductListGroq(userPrompt);
 
   const itemListFromGroq = chatCompletion.choices[0]?.message?.content || ""
